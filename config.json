@@ -1,1 +1,4 @@
-#Configuration of user options
+{
+	"Test1": 1000,
+	"Test2": 2000
+}
