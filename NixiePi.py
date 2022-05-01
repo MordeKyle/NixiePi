@@ -1,6 +1,8 @@
 import datetime
 import time
 import json
+import RPi.GPIO as GPIO
+import sys
 
 with open("config.json") as config_file:
  data = json.load(config_file)
@@ -8,7 +10,8 @@ with open("config.json") as config_file:
 hours = 0
 minutes = 0
 format = data["Format"]
-print(format)
+numbers = [data["Zero"], data["One"], data["Two"], data["Three"], data["Four"], data["Five"], data["Six"], data["Seven"], data["Eight"], data["Nine"]]
+#print(numbers[9])
 
 def decideFormat(hours, format):
  intHours = int(hours)
